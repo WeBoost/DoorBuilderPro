@@ -1,19 +1,15 @@
-import { useEffect, useState } from "react";
-import { supabase } from "./lib/supabase";
-import AppRoutes from "./routes";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
 
 const App: React.FC = () => {
-    const [user, setUser] = useState<any>(null);
-
-    useEffect(() => {
-        const checkUser = async () => {
-            const { data } = await supabase.auth.getUser();
-            setUser(data.user);
-        };
-        checkUser();
-    }, []);
-
-    return <AppRoutes user={user} />;
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
+  );
 };
 
 export default App;
