@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import DoorConfigurator from './components/DoorConfigurator';
-import Layout from './components/Layout';
+import Layout from './components/Layout/Layout';
 import Dashboard from './components/Dashboard';
 
 const App: React.FC = () => {
