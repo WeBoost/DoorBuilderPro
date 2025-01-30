@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Add these custom styles */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+.max-w-7xl {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Preserve your existing styles below */
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

@@ -1,8 +1,23 @@
 import React from 'react';
+import { Globe, ChevronDown, Menu, ArrowRight, CheckCircle2, X, Star, CheckCircle } from "lucide-react";
 
-const Home: React.FC = () => {
+interface HomeProps {
+  isMobileMenuOpen: boolean;
+  setIsMobileMenuOpen: (isOpen: boolean) => void;
+  features: any[];
+  testimonials: any[];
+  trustedCompanies: any[];
+}
+
+const Home: React.FC<HomeProps> = ({ 
+  isMobileMenuOpen, 
+  setIsMobileMenuOpen,
+  features,
+  testimonials,
+  trustedCompanies 
+}) => {
   return (
-    <div className="bg-gradient-to-b from-gray-900 to-black text-white min-h-screen">
+    <div className="w-full min-h-screen bg-slate-900">
       {/* Header */}
       <header className="flex justify-between items-center p-6 bg-gray-950 shadow-md">
         <h1 className="text-2xl font-bold text-white">DoorBuilderPro</h1>
